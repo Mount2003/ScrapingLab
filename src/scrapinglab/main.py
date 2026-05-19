@@ -10,6 +10,7 @@ from playwright.async_api import (
 from scrapinglab import (
     Extension1,
     Extension2,
+    Extension3,
 )
 
 logger: Logger = logging.getLogger(__name__)
@@ -29,7 +30,8 @@ async def main_init() -> None:
     ):
         ext_list = [
             # Extension1(browser=browser),
-            Extension2(browser=browser)
+            # Extension2(browser=browser),
+            Extension3(browser=browser),
         ]
         try:
             tg: TaskGroup
