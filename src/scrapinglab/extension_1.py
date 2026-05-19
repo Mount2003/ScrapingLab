@@ -8,17 +8,14 @@ from playwright.async_api import (
     Locator,
 )
 class Extension1:
-    def __init__(
-        self,
-        browser: Browser | None = None
-    ) -> None:
+    def __init__(self, browser: Browser|None = None) -> None:
         self.logger: Logger = logging.getLogger(self.__class__.__name__)
         self.browser: Browser = browser
         self.url: str = 'https://the-internet.herokuapp.com/abtest'
 
     async def init_extension(self) -> None:
-        context: None | BrowserContext = None
-        page: None | Page = None
+        context: BrowserContext
+        page: Page
         async with (
             await self.browser.new_context() as context, 
             await context.new_page() as page,
@@ -34,8 +31,11 @@ class Extension1:
         await asyncio.sleep(5)
         self.logger.info(f'{self.__class__.__name__} is done...\n')
 
-    def _confirm_result(self, text: str = '') -> None:
-        header_text_list: list[str] = ['A/B Test Variation 1', 'A/B Test Control']
+    def _confirm_result(self, text:str = '') -> None:
+        header_text_list: list[str] = [
+            'A/B Test Variation 1',
+            'A/B Test Control'
+        ]
         if text in header_text_list:
             self.logger.info(f'Current header is "{text}" in "{self.url}"...')
         else:

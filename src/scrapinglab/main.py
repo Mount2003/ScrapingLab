@@ -7,7 +7,10 @@ from playwright.async_api import (
     Browser, 
     Playwright,
 )
-from scrapinglab.extension_1 import Extension1
+from scrapinglab import (
+    Extension1,
+    Extension2,
+)
 
 logger: Logger = logging.getLogger(__name__)
 
@@ -24,13 +27,16 @@ async def main_init() -> None:
         async_playwright() as p,
         await p.chromium.launch(headless=False) as browser,
     ):
-        ext_list = [Extension1(browser=browser)]
+        ext_list = [
+            # Extension1(browser=browser),
+            Extension2(browser=browser)
+        ]
         try:
             tg: TaskGroup
             async with asyncio.TaskGroup() as tg:
                 for ext in ext_list:
                     tg.create_task(ext.init_extension())
-        except ExceptionGroup:
+        except Exception:
             logger.exception('TaskGroup failed execution:')
 
 def main() -> None:
