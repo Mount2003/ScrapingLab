@@ -13,6 +13,7 @@ from scrapinglab import (
     BasicAuth,
     BrokenImages,
     ChallengingDOM,
+    CheckBoxes,
 )
 
 logger: Logger = logging.getLogger(__name__)
@@ -35,7 +36,8 @@ async def main_init() -> None:
             # AddRemoveElements(browser=browser),
             # BasicAuth(browser=browser),
             # BrokenImages(browser=browser),
-            ChallengingDOM(browser=browser),
+            # ChallengingDOM(browser=browser),
+            CheckBoxes(browser=browser),
         ]
         try:
             tg: TaskGroup

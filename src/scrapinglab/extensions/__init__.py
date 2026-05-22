@@ -3,6 +3,7 @@ from .add_remove_elements import AddRemoveElements
 from .basic_auth import BasicAuth
 from .broken_images import BrokenImages
 from .challenging_dom import ChallengingDOM
+from .checkboxes import CheckBoxes
 
 __all__ = [
     'SplitTesting',
@@ -10,4 +11,5 @@ __all__ = [
     'BasicAuth',
     'BrokenImages',
     'ChallengingDOM',
+    'CheckBoxes',
 ]
