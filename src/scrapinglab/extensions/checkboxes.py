@@ -31,10 +31,12 @@ class CheckBoxes:
         for id, checkbox in enumerate(checkbox_list, start=1):
             status_ticked: bool = await checkbox.is_checked()
             if status_ticked:
-                self.logger.info(f'Checkbox{id} is checked, proceed to uncheck it...')
+                self.logger.info(f'Checkbox{id} is checked, '
+                    'proceed to uncheck it...')
                 await checkbox.set_checked(not status_ticked)
             else:
-                self.logger.info(f'Checkbox{id} is unchecked, proceed to check it...')
+                self.logger.info(f'Checkbox{id} is unchecked, '
+                    'proceed to check it...')
                 await checkbox.set_checked(not status_ticked)
             await asyncio.sleep(1.5)
         return True
