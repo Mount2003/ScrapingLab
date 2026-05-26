@@ -3,7 +3,7 @@ from playwright.async_api import (
     Page, 
     Locator,
 )
-from .base_extension import BaseExtension
+from .core.base_extension import BaseExtension
 
 class SplitTesting(BaseExtension):
     url: str = 'https://the-internet.herokuapp.com/abtest'    

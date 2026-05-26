@@ -4,7 +4,7 @@ from playwright.async_api import (
     Page,
     Locator,
 )
-from .base_extension import BaseExtension
+from .core.base_extension import BaseExtension
 
 class AddRemoveElements(BaseExtension):
     url = 'https://the-internet.herokuapp.com/add_remove_elements/'

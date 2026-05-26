@@ -3,7 +3,7 @@ from playwright.async_api import (
     Page,
     Locator,
 )
-from .base_extension import BaseExtension
+from .core.base_extension import BaseExtension
 
 class DisappearingElements(BaseExtension):
     url = 'https://the-internet.herokuapp.com/disappearing_elements'

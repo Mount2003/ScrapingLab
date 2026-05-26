@@ -1,4 +1,4 @@
-from .base_extension import BaseExtension
+from .core import BaseExtension
 from .split_testing import SplitTesting
 from .add_remove_elements import AddRemoveElements
 from .basic_auth import BasicAuth

@@ -7,8 +7,10 @@ from playwright.async_api import (
     Browser, 
     Playwright,
 )
-from scrapinglab.extensions import ACTIVE_EXTENSIONS
-from scrapinglab.extensions.base_extension import BaseExtension
+from scrapinglab import (
+    ACTIVE_EXTENSIONS,
+    BaseExtension,
+)
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]]
 logger: Logger = logging.getLogger(__name__)
