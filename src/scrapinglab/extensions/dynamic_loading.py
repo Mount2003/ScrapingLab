@@ -41,4 +41,4 @@ class DynamicLoading(BaseExtension):
         message: str = await text.inner_text()
         self.logger.info(
             f'Hidden text "{message}" state '
-            f'changed from hidden into visible successfully!')
+            f'changed from hidden to visible successfully!')
