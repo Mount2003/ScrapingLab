@@ -12,6 +12,7 @@ from .drag_and_drop import DragAndDrop
 from .dropdown import Dropdown
 from .dynamic_content import DynamicContent
 from .dynamic_controls import DynamicControls
+from .dynamic_loading import DynamicLoading
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SplitTesting,
@@ -26,5 +27,6 @@ ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # DragAndDrop,
     # Dropdown,
     # DynamicContent,
-    DynamicControls,
+    # DynamicControls,
+    DynamicLoading,
 ]
