@@ -4,7 +4,6 @@ from playwright.async_api import (
     Locator,
     Download,
 )
-import asyncio
 
 class FileDownloader(BaseExtension):
     url = 'https://the-internet.herokuapp.com/download'
