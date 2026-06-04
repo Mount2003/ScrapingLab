@@ -19,6 +19,7 @@ from .file_downloader import FileDownloader
 from .file_uploader import FileUploader
 from .floating_menu import FloatingMenu
 from .forgot_password import ForgotPassword
+from .login_page import LoginPage
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SplitTesting,
@@ -40,5 +41,6 @@ ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # FileDownloader,
     # FileUploader,
     # FloatingMenu,
-    ForgotPassword,
+    # ForgotPassword,
+    LoginPage,
 ]
