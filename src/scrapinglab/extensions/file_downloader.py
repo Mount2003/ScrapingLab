@@ -1,3 +1,4 @@
+from pathlib import Path
 from .core import BaseExtension
 from playwright.async_api import (
     Page,
@@ -23,7 +24,7 @@ class FileDownloader(BaseExtension):
         ):
             await link.click()
         download: Download = await download_info.value
-        await download.save_as(
-            f"C:\\Users\\MaeganMaulder\\Downloads\\TEST\\"
-            f"{download.suggested_filename}")
-        self.logger.info(f'Downloaded {download.suggested_filename}')
+        save_path = Path(__file__).resolve().parent
+        save_path = save_path/download.suggested_filename
+        await download.save_as(f'{save_path}')
+        self.logger.info(f'Downloaded: {save_path}')
