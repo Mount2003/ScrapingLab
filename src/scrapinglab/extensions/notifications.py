@@ -3,7 +3,6 @@ from playwright.async_api import (
     Page,
     Locator,
 )
-import asyncio
 
 class Notifications(BaseExtension):
     url = 'https://the-internet.herokuapp.com/notification_message_rendered'
