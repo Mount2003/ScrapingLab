@@ -30,6 +30,7 @@ from .jquery_module import JQueryUIMenu
 from .js_alerts import JSAlerts
 from .js_error import JSError
 from .key_presses import KeyPresses
+from .large_deep_dom import LargeDeepDOM
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SplitTesting,
@@ -62,5 +63,6 @@ ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # JQueryUIMenu,
     # JSAlerts,
     # JSError,
-    KeyPresses,
+    # KeyPresses,
+    LargeDeepDOM,
 ]
