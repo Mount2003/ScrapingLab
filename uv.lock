@@ -724,7 +724,7 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "toolbox", git = "https://github.com/Mount2003/ToolBox.git" }]
+dev = [{ name = "toolbox", git = "https://github.com/mount-automation/ToolBox" }]
 
 [[package]]
 name = "seedir"
@@ -794,7 +794,7 @@ wheels = [
 [[package]]
 name = "toolbox"
 version = "0.1.0"
-source = { git = "https://github.com/Mount2003/ToolBox.git#532aeaddcffb9a958dfeb925e0145a6196715ce1" }
+source = { git = "https://github.com/mount-automation/ToolBox#532aeaddcffb9a958dfeb925e0145a6196715ce1" }
 dependencies = [
     { name = "pyperclip" },
     { name = "seedir" },

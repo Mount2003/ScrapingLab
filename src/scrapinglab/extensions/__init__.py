@@ -29,6 +29,7 @@ from .inputs import Inputs
 from .jquery_module import JQueryUIMenu
 from .js_alerts import JSAlerts
 from .js_error import JSError
+from .key_presses import KeyPresses
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SplitTesting,
@@ -60,5 +61,6 @@ ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # Inputs,
     # JQueryUIMenu,
     # JSAlerts,
-    JSError,
+    # JSError,
+    KeyPresses,
 ]
