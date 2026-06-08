@@ -1,8 +1,6 @@
 from .core import BaseExtension
 from playwright.async_api import (
     Page,
-    Locator,
-    Dialog,
 )
 
 class JSError(BaseExtension):
