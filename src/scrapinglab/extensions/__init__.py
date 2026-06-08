@@ -31,6 +31,7 @@ from .js_alerts import JSAlerts
 from .js_error import JSError
 from .key_presses import KeyPresses
 from .large_deep_dom import LargeDeepDOM
+from .multiple_windows import MultipleWindows
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SplitTesting,
@@ -64,5 +65,6 @@ ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # JSAlerts,
     # JSError,
     # KeyPresses,
-    LargeDeepDOM,
+    # LargeDeepDOM,
+    MultipleWindows,
 ]
