@@ -40,6 +40,7 @@ from .shifting_content import ShiftingContent
 from .slow_resources import SlowResources
 from .tables import Tables
 from .status_codes import StatusCodes
+from .typos import Typos
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SplitTesting,
@@ -82,5 +83,6 @@ ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # ShiftingContent,
     # SlowResources,
     # Tables,
-    StatusCodes,
+    # StatusCodes,
+    Typos,
 ]
