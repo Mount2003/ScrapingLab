@@ -38,6 +38,7 @@ from .secure_file_download import SecureFileDownload
 from .shadow_dom import ShadowDom
 from .shifting_content import ShiftingContent
 from .slow_resources import SlowResources
+from .tables import Tables
 
 ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SplitTesting,
@@ -78,5 +79,6 @@ ACTIVE_EXTENSIONS: list[type[BaseExtension]] = [
     # SecureFileDownload,
     # ShadowDom,
     # ShiftingContent,
-    SlowResources,
+    # SlowResources,
+    Tables,
 ]
